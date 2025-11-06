@@ -5,17 +5,15 @@ import { EditorTabs } from '@/components/Editor/EditorTabs';
 import { CodeEditor } from '@/components/Editor/CodeEditor';
 import { LanguageSelector } from '@/components/Editor/LanguageSelector';
 import { OutputPanel } from '@/components/Output/OutputPanel';
-import { ErrorDisplay } from '@/components/Output/ErrorDisplay';
 import { useFileManager } from '@/hooks/useFileManager';
 import { useCodeExecution } from '@/hooks/useCodeExecution';
 
 function App() {
   const { files, openFiles, activeFileId, updateFile } = useFileManager();
-  const { executeCode, isRunning, error } = useCodeExecution();
+  const { executeCode, isRunning } = useCodeExecution();
   const [editorValue, setEditorValue] = useState('');
 
   const activeFile = files.find(f => f.id === activeFileId);
-  const openFile = openFiles.find(f => f.file.id === activeFileId);
 
   useEffect(() => {
     if (activeFile) {
