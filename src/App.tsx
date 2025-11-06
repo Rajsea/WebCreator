@@ -9,7 +9,7 @@ import { useFileManager } from '@/hooks/useFileManager';
 import { useCodeExecution } from '@/hooks/useCodeExecution';
 
 function App() {
-  const { files, openFiles, activeFileId, updateFile } = useFileManager();
+  const { files, activeFileId, updateFile } = useFileManager();
   const { executeCode, isRunning } = useCodeExecution();
   const [editorValue, setEditorValue] = useState('');
 
