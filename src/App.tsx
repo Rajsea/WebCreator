@@ -5,6 +5,7 @@ import { EditorTabs } from '@/components/Editor/EditorTabs';
 import { CodeEditor } from '@/components/Editor/CodeEditor';
 import { LanguageSelector } from '@/components/Editor/LanguageSelector';
 import { OutputPanel } from '@/components/Output/OutputPanel';
+import { AIChat } from '@/components/AIAssistant/AIChat';
 import { useFileManager } from '@/hooks/useFileManager';
 import { useCodeExecution } from '@/hooks/useCodeExecution';
 
