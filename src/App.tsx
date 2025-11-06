@@ -117,6 +117,9 @@ function App() {
         {/* Output Panel */}
         <OutputPanel />
       </div>
+
+      {/* AI Assistant */}
+      <AIChat />
     </MainLayout>
   );
 }
