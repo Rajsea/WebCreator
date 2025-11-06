@@ -40,9 +40,10 @@ export const useFileManager = create<FileManagerState>()(
 
       createFile: async (name: string, language: 'javascript' | 'python' | 'html' | 'css', folderId?: string) => {
         const file = await fileService.createFile(name, language, folderId);
+        const updatedFolders = await fileService.updateFoldersWithNewFile(file, get().folders);
         set(state => ({
           files: [...state.files, file],
-          folders: await fileService.updateFoldersWithNewFile(file, state.folders)
+          folders: updatedFolders
         }));
         return file;
       },
