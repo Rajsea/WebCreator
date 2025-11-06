@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { Terminal, Trash2, Maximize2, Minimize2, Clock } from 'lucide-react';
 import { useCodeExecution } from '@/hooks/useCodeExecution';
 
