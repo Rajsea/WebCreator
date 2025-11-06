@@ -76,8 +76,10 @@ const FileTreeItem = ({ item, level, searchQuery }: FileTreeItemProps) => {
             )}
           </>
         ) : (
-          <div className="w-4" />
-          {getFileIcon(item.language)}
+          <>
+            <div className="w-4" />
+            {getFileIcon(item.language)}
+          </>
         )}
 
         <span className="text-sm text-gray-700 dark:text-gray-300 truncate">
