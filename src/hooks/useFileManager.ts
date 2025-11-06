@@ -1,6 +1,6 @@
 import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
-import { File, Folder, OpenFile, FileTreeItem } from '@/types/File';
+import { File, Folder, OpenFile } from '@/types/File';
 import { fileService } from '@/services/fileService';
 
 interface FileManagerState {
