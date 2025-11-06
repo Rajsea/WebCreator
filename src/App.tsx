@@ -34,6 +34,11 @@ function App() {
       return;
     }
 
+    if (activeFile.language === 'html' || activeFile.language === 'css') {
+      alert('HTML and CSS files cannot be executed directly. Try running JavaScript or Python files instead.');
+      return;
+    }
+
     await executeCode(editorValue, activeFile.language);
   };
 
